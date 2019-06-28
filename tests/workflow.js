@@ -12,6 +12,12 @@ describe("Login", function() {
 
         expect($("[data-test='error']").isDisplayed());
 
+        $("#user-name").addValue("invalid");
+        $("#password").addValue("invalid");
+        $(".btn_action").click();	
+
+        expect($("[data-test='error']").isDisplayed());
+
         $("#user-name").addValue("standard_user");
         $("#password").addValue("secret_sauce");
         $(".btn_action").click();
