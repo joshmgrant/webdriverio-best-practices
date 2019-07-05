@@ -1,14 +1,13 @@
 const expect = require('chai').expect;
+const loginPage = new (require('../pages/login.page'));
 
 
 describe("Login with Valid Username", function() {
 
     it("with standard user", function() {
-        browser.url("/")
+        loginPage.open();
 
-        $("#user-name").addValue("standard_user");
-        $("#password").addValue("secret_sauce");
-        $(".btn_action").click();
+        loginPage.loginAs("standard_user", "secret_sauce");
 
 	     expect($('#header_container').isDisplayed()).to.be.true;
     });

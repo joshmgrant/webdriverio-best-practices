@@ -1,15 +1,14 @@
 const expect = require('chai').expect;
+const loginPage = new (require('../pages/login.page'));
 
 
 describe("Login with Invalid Username", function() {
 
     it("with invalid username", function() {
-        browser.url("/")
+        loginPage.open();
 
-        $("#user-name").addValue("invalid");
-        $("#password").addValue("invalid");
-        $(".btn_action").click();	
+        loginPage.loginAs("invalid", "invalid");
 
-        expect($("[data-test='error']").isDisplayed()).to.be.true;
+        expect(loginPage.isErrorVisible()).to.be.true;
     });
 });
