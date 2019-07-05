@@ -139,4 +139,9 @@ exports.config = {
         timeout: 60000
     },
 
+    // Add in a before hook that applies to all sessions
+    before: function() {
+	browser.url("/");
+    }
+
 }
