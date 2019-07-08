@@ -1,5 +1,6 @@
 const expect = require('chai').expect;
 const loginPage = new (require('../pages/login.page'));
+const inventoryPage = new (require("../pages/inventory.page"));
 
 
 describe("Login with Valid Username", function() {
@@ -9,6 +10,6 @@ describe("Login with Valid Username", function() {
 
         loginPage.loginAs("standard_user", "secret_sauce");
 
-	     expect($('#header_container').isDisplayed()).to.be.true;
+	     expect(inventoryPage.header().isDisplayed()).to.be.true;
     });
 });
