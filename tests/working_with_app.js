@@ -1,6 +1,10 @@
 describe("Using the App", () => {
+
+    beforeEach(() => {
+       browser.url("/") 
+    });
     
-    it("should create repots", () => {
+    it("should create reports", () => {
 
     });
 
