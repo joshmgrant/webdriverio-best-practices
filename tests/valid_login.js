@@ -2,7 +2,7 @@ const expect = require('chai').expect;
 const LoginPage = require('../pages/login.page');
 const loginPage = new LoginPage();
 
-describe('Standard user', function() {
+describe('Extended Debugging Example', function() {
 
     it("login successfully", function() {
         loginPage.open();
