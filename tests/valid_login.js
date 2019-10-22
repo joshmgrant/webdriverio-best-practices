@@ -2,11 +2,11 @@ const expect = require('chai').expect;
 const LoginPage = require('../pages/login.page');
 const loginPage = new LoginPage();
 
-describe('Extended Debugging Example', function() {
+describe('Using Sauce Connect', function() {
 
     it("login successfully", function() {
         loginPage.open();
-        loginPage.loginAs("standard_user", "secret_sauce");
-        expect($('#header_container').isDisplayed());
+        loginPage.loginAs("tomsith", "SuperSecretPassword!");
+        expect($('.success').isDisplayed());
     });
 });

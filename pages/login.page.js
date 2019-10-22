@@ -7,17 +7,17 @@ class LoginPage extends Page {
     }
     
     open() {
-       super.open("");
+       super.open("login");
     }
 
     loginAs(username, password) {
-        $("#user-name").setValue(username);
+        $("#username").setValue(username);
         $("#password").setValue(password);
-        $(".btn_action").click();
+        $(".radius").click();
     }
 
     isErrorVisible() {
-        return $("[data-test='error']").isDisplayed();
+        return $(".error").isDisplayed();
     }
 
     
