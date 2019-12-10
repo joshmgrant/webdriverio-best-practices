@@ -64,7 +64,10 @@ exports.config = {
         // 5 instance gets started at a time.
         //maxInstances: 5,
         //
-      {browserName: 'chrome', platform: 'Windows 10', version: 'latest'},
+        {browserName: 'chrome', platform: 'OS X 10.13', version: 'latest'},
+        {browserName: 'chrome', platform: 'Windows 10', version: 'latest', extendedDebugging: true},
+        {browserName: 'safari', platform: 'OS X 10.12', version: '11'},
+        {browserName: 'chrome', platformName: 'Android', platformVersion: '9.0', deviceName: 'Android GoogleAPI Emulator', deviceOrientation: 'portrait'},
     ],
     //
     // ===================
