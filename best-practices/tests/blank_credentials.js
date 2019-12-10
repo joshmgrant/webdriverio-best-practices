@@ -1,15 +1,14 @@
 const expect = require('chai').expect;
+const loginPage = new (require('../pages/login.page'));
 
 
 describe("Blank credentials", function() {
 
     it("should not login with blank credentials", function() {
-        browser.url("/");
+        loginPage.open();
 
-        $("#user-name").setValue("");
-        $("#password").setValue("");
-        $(".btn_action").click();	
+        loginPage.loginAs("", "");
 
-        expect($("[data-test='error']").isDisplayed()).to.be.true;
+        expect(loginPage.isErrorVisible()).to.be.true;
     });
 });
