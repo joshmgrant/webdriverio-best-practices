@@ -1,7 +1,7 @@
 {
   "name": "bestpractices-webdriverio",
   "version": "1.0.0",
-  "description": "A Best Practices sample framework using Webdriver.IO"
+  "description": "A Best Practices sample framework using Webdriver.IO",
   "main": "",
   "repository": {
     "type": "git",
