@@ -22,7 +22,6 @@
     "@wdio/mocha-framework": "^5.11.0",
     "@wdio/sauce-service": "^5.11.1",
     "@wdio/spec-reporter": "^5.11.7",
-    "@wdio/sync": "^5.11.10",
-    "@wdio/selenium-standalone-serivce": "^5.7.0"
+    "@wdio/sync": "^5.11.10"
   }
 }
