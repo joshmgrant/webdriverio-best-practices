@@ -1,23 +1,18 @@
-const Page = require('./page');
+class LoginPage {
 
-class LoginPage extends Page {
-
-    constructor() {
-        super();
-    }
     
     open() {
-       super.open("login");
+       browser.url("/");
     }
 
     loginAs(username, password) {
-        $("#username").setValue(username);
+        $("#user-name").setValue(username);
         $("#password").setValue(password);
-        $(".radius").click();
+        $(".btn_action").click();
     }
 
     isErrorVisible() {
-        return $(".error").isDisplayed();
+        return $(".error-button").isDisplayed();
     }
 
     

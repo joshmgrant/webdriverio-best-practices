@@ -17,8 +17,7 @@ exports.config = {
     //
     user: process.env.SAUCE_USERNAME,
     key: process.env.SAUCE_ACCESS_KEY,
-    sauceConnect: true,
-    sauceConnectOpts: { tunnelIdentifier: 'myTunnel'}, 
+
     //
     // If you run your tests on SauceLabs you can specify the region you want to run your tests
     // in via the `region` property. Available short handles for regions are `us` (default) and `eu`.
@@ -66,7 +65,7 @@ exports.config = {
         // 5 instance gets started at a time.
         //maxInstances: 5,
         //
-        {browserName: 'chrome', platform: 'Windows 10', version: 'latest', 'extendedDebugging': true, 'capturePerformance': true},
+        {browserName: 'chrome', platform: 'Windows 10', version: 'latest'},
 
 
 
@@ -102,7 +101,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://myfunhost:9292',
+    baseUrl: 'https://www.saucedemo.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -141,12 +140,7 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 6000000
     },
-
-    // Add in a before hook that applies to all sessions
-    before: function() {
-	browser.url("/");
-    }
 
 }
